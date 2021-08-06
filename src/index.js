@@ -6,10 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import Amplify, { AuthModeStrategyType } from 'aws-amplify'
 import awsconfig from './aws-exports'
 
+//Amplify.configure({
+//  ...awsconfig,
+//  DataStore: {
+//    authModeStrategyType: AuthModeStrategyType.DEFAULT
+//  }
+//})
+
 Amplify.configure({
   ...awsconfig,
   DataStore: {
-    authModeStrategyType: AuthModeStrategyType.DEFAULT
+    authModeStrategyType: AuthModeStrategyType.MULTI_AUTH
   }
 })
 
