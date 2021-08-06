@@ -48,14 +48,14 @@ function App() {
             await Auth.signOut()
             checkLoginState()
           }} />
-/*        <button onClick={() => {
-          DataStore.save(new Post({
-            content: window.prompt('New post:')
-          }))
-        }}>
-          📝 Add a new post
-        </button>
-*/
+//        <button onClick={() => {
+//          DataStore.save(new Post({
+//            content: window.prompt('New post:')
+//          }))
+//        }}>
+//          📝 Add a new post
+//        </button>
+
         {currentUser &&
           <button onClick={() => {
             DataStore.save(new Post({
