@@ -1,7 +1,12 @@
 import { DataStore } from 'aws-amplify';
 
 function PostView({ post, currentUser }) {
-    let showDeleteButton = true
+    //let showDeleteButton = true
+
+    let showDeleteButton = false
+    if (currentUser) {
+        showDeleteButton = true
+    }
 
     return <div className="post">
         <div className="content">
